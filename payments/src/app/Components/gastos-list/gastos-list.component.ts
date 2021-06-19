@@ -12,13 +12,17 @@ export class GastosListComponent implements OnInit {
   payments: any[] | undefined;
 
   constructor(private paymentService: PaymentService, private router: Router) { }
-
+  totalpayment=0;
   ngOnInit(): void {
     this.loadPayments();
   }
   loadPayments(): void{
     this.paymentService.getPayments().subscribe((resp :any)=>{
       this.payments = resp
+      this.payments?.forEach((payment)=>{
+        this.totalpayment = this.totalpayment+ payment.amount;
+
+      })
       console.log(resp);
     })
   }

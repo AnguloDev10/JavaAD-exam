@@ -5,6 +5,7 @@ import {GastosListComponent} from "./Components/gastos-list/gastos-list.componen
 import {CreateGastoComponent} from "./Components/create-gasto/create-gasto.component";
 
 const routes: Routes = [
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
   {path: 'home', component: HomeComponent},
   {path: 'payment', component: GastosListComponent},
   {path: 'create', component: CreateGastoComponent}

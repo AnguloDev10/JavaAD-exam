@@ -1,5 +1,5 @@
 <div>
-  <h1>1</h1>
+  <h1>{{totalpayment}}</h1>
   <button class="btn btn-primary btn-block" (click)="create()" >Create a payment</button>
 </div>
 
@@ -13,7 +13,7 @@
         <a href="#" ><img class="card-img-top" src="" alt=""> </a>
         <h5 class="card-title ">{{payment.detail}}</h5>
         <div class="row">
-          <h5 class="card-body">{{payment.createdAt }}  </h5>
+          <h5 class="card-body">{{payment.date }}  </h5>
         </div>
       </div>
 
