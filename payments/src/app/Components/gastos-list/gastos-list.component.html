@@ -1,0 +1,21 @@
+<div>
+  <h1>1</h1>
+  <button class="btn btn-primary btn-block" (click)="create()" >Create a payment</button>
+</div>
+
+<div class="row card-deck" >
+  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let payment of payments">
+    <div class="card text-center">
+      <div class="card-header">
+        <h1>S/{{payment.amount}}</h1>
+      </div>
+      <div class="card-body ">
+        <a href="#" ><img class="card-img-top" src="" alt=""> </a>
+        <h5 class="card-title ">{{payment.detail}}</h5>
+        <div class="row">
+          <h5 class="card-body">{{payment.createdAt }}  </h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
